@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite configfailurepolicy="continue" thread-count="2" parallel="methods" name="Failed suite [ParallelAndGroupingSuite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="redbus_nagp_automation.listeners.TestListener"/>
+    <listener class-name="redbus_nagp_automation.listeners.MyTransformer"/>
+  </listeners>
+  <test thread-count="2" parallel="methods" name="Micro Smoke Suite(failed)">
+    <groups>
+      <run>
+        <exclude name="smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="redbus_nagp_automation.testclass.SmokeTest">
+        <methods>
+          <include name="getResult"/>
+          <include name="setUpReport"/>
+          <include name="verifyHomePage"/>
+          <include name="flushReport"/>
+          <include name="verifySearchedBusDetails"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- redbus_nagp_automation.testclass.SmokeTest -->
+    </classes>
+  </test> <!-- Micro Smoke Suite(failed) -->
+</suite> <!-- Failed suite [ParallelAndGroupingSuite] -->

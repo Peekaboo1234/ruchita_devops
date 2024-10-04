@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="6" total="8" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-04-20T23:07:40 IST" name="GroupingSuite" finished-at="2024-04-20T23:08:02 IST" duration-ms="21370">
+    <groups>
+    </groups>
+    <test started-at="2024-04-20T23:07:40 IST" name="Smoke Suite" finished-at="2024-04-20T23:08:02 IST" duration-ms="21370">
+      <class name="redbus_nagp_automation.testclass.SmokeTest">
+        <test-method is-config="true" signature="setUpReport()[pri:0, instance:redbus_nagp_automation.testclass.SmokeTest@3a3e78f]" started-at="2024-04-20T23:07:40 IST" name="setUpReport" finished-at="2024-04-20T23:07:40 IST" duration-ms="255" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpReport -->
+        <test-method signature="verifyHomePage()[pri:0, instance:redbus_nagp_automation.testclass.SmokeTest@3a3e78f]" started-at="2024-04-20T23:07:41 IST" name="verifyHomePage" description="Verify HomePage Elements" finished-at="2024-04-20T23:07:51 IST" duration-ms="10505" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomePage -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:redbus_nagp_automation.testclass.SmokeTest@3a3e78f]" started-at="2024-04-20T23:07:51 IST" name="getResult" finished-at="2024-04-20T23:07:51 IST" duration-ms="10" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyHomePage status=SUCCESS method=SmokeTest.verifyHomePage()[pri:0, instance:redbus_nagp_automation.testclass.SmokeTest@3a3e78f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:redbus_nagp_automation.testclass.SmokeTest@3a3e78f]" started-at="2024-04-20T23:07:51 IST" name="tearDown" finished-at="2024-04-20T23:07:51 IST" duration-ms="440" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method signature="verifyRedRailPage()[pri:0, instance:redbus_nagp_automation.testclass.SmokeTest@3a3e78f]" started-at="2024-04-20T23:07:51 IST" name="verifyRedRailPage" description="Verify Train page elements" finished-at="2024-04-20T23:08:01 IST" duration-ms="9894" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRedRailPage -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:redbus_nagp_automation.testclass.SmokeTest@3a3e78f]" started-at="2024-04-20T23:08:01 IST" name="getResult" finished-at="2024-04-20T23:08:01 IST" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyRedRailPage status=SUCCESS method=SmokeTest.verifyRedRailPage()[pri:0, instance:redbus_nagp_automation.testclass.SmokeTest@3a3e78f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:redbus_nagp_automation.testclass.SmokeTest@3a3e78f]" started-at="2024-04-20T23:08:01 IST" name="tearDown" finished-at="2024-04-20T23:08:02 IST" duration-ms="483" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="flushReport()[pri:0, instance:redbus_nagp_automation.testclass.SmokeTest@3a3e78f]" started-at="2024-04-20T23:08:02 IST" name="flushReport" finished-at="2024-04-20T23:08:03 IST" duration-ms="653" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushReport -->
+      </class> <!-- redbus_nagp_automation.testclass.SmokeTest -->
+    </test> <!-- Smoke Suite -->
+  </suite> <!-- GroupingSuite -->
+</testng-results>

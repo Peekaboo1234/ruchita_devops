@@ -1,0 +1,111 @@
+[INFO ] 2024-04-20 23:07:50.885 [main] HomePage - Verify all essential elements are present on the homepage.
+[INFO ] 2024-04-20 23:07:51.368 [main] HomePage - All essential elements are present and visible on the homepage
+[INFO ] 2024-04-20 23:07:51.368 [main] HomePage - Checking if the error message is displayed on the homepage.
+[ERROR] 2024-04-20 23:07:51.508 [main] HomePage - Error message is not displayed on the homepage
+[INFO ] 2024-04-20 23:07:58.676 [main] RedRailPage - Verify red rail page and its elements
+[INFO ] 2024-04-20 23:08:01.578 [main] RedRailPage - Verify red rail page and its elements
+[INFO ] 2024-04-21 14:48:45.947 [TestNG-test=Smoke Suite-1] AccountOptionsPage - Navigate to the Help section
+[INFO ] 2024-04-21 14:48:46.177 [TestNG-test=Smoke Suite-1] AccountOptionsPage - Dropdown options count verification passed. Total options: 5
+[INFO ] 2024-04-21 14:48:47.051 [TestNG-test=Smoke Suite-1] AccountOptionsPage - Landed on Cancel Ticket page successfully.
+[INFO ] 2024-04-21 14:48:49.454 [TestNG-test=Smoke Suite-1] AccountOptionsPage - Landed on Change Travel Date page successfully.
+[INFO ] 2024-04-21 14:48:51.327 [TestNG-test=Smoke Suite-1] AccountOptionsPage - Landed on Show My Ticket page successfully.
+[INFO ] 2024-04-21 14:48:52.988 [TestNG-test=Smoke Suite-2] SearchBusPage - No buses found for the given route.
+[INFO ] 2024-04-21 14:48:53.027 [TestNG-test=Smoke Suite-2] SearchBusPage - Search completed successfully.
+[INFO ] 2024-04-21 14:48:53.160 [TestNG-test=Smoke Suite-1] AccountOptionsPage - Landed on Email/SMS page successfully.
+[INFO ] 2024-04-21 14:48:58.361 [TestNG-test=Smoke Suite-2] SearchBusPage - Date input is already selected.
+[INFO ] 2024-04-21 14:49:01.658 [TestNG-test=Smoke Suite-1] HelpPage - Navigate to the Help section
+[INFO ] 2024-04-21 14:49:06.848 [TestNG-test=Smoke Suite-1] HelpPage - Landed on Help page successfully.
+[INFO ] 2024-04-21 14:49:06.848 [TestNG-test=Smoke Suite-1] HelpPage - Verify all essential elements are present on the Help page.
+[INFO ] 2024-04-21 14:49:14.199 [TestNG-test=Smoke Suite-1] HelpPage - All essential elements are present on the Help page.
+[INFO ] 2024-04-21 14:49:14.199 [TestNG-test=Smoke Suite-1] HelpPage - Verify change in language
+[INFO ] 2024-04-21 14:49:14.926 [TestNG-test=Smoke Suite-2] SearchBusPage - Search completed successfully.
+[INFO ] 2024-04-21 14:49:18.590 [TestNG-test=Smoke Suite-1] HelpPage - Change in language happened successfully. Verification passed.
+[INFO ] 2024-04-21 14:49:23.069 [TestNG-test=Smoke Suite-2] SearchBusPage - Date input is already selected.
+[INFO ] 2024-04-21 14:49:30.888 [TestNG-test=Smoke Suite-1] HomePage - Verify all essential elements are present on the homepage.
+[INFO ] 2024-04-21 14:49:31.911 [TestNG-test=Smoke Suite-1] HomePage - All essential elements are present and visible on the homepage
+[INFO ] 2024-04-21 14:49:31.911 [TestNG-test=Smoke Suite-1] HomePage - Checking if the error message is displayed on the homepage.
+[ERROR] 2024-04-21 14:49:32.229 [TestNG-test=Smoke Suite-1] HomePage - Error message is not displayed on the homepage
+[INFO ] 2024-04-21 14:49:39.807 [TestNG-test=Smoke Suite-2] SearchBusPage - Search completed successfully.
+[INFO ] 2024-04-21 14:49:46.501 [TestNG-test=Smoke Suite-1] OffersPage - Navigate to the Offers section
+[INFO ] 2024-04-21 14:49:49.949 [TestNG-test=Smoke Suite-2] SearchBusPage - Date input is already selected.
+[INFO ] 2024-04-21 14:49:52.461 [TestNG-test=Smoke Suite-1] OffersPage - Landed on Offers page successfully.
+[INFO ] 2024-04-21 14:49:52.461 [TestNG-test=Smoke Suite-1] OffersPage - Verify Title of the second page
+[INFO ] 2024-04-21 14:49:52.543 [TestNG-test=Smoke Suite-1] OffersPage - Title of the second page contains 'Offers'. Verification passed.
+[INFO ] 2024-04-21 14:49:53.633 [TestNG-test=Smoke Suite-1] OffersPage - Message 'What is the Offer' is displayed. Verification passed.
+[INFO ] 2024-04-21 14:50:06.059 [TestNG-test=Smoke Suite-2] SearchBusPage - Search completed successfully.
+[INFO ] 2024-04-21 14:50:08.623 [TestNG-test=Smoke Suite-1] RedRailPage - Verify red rail page and its elements
+[INFO ] 2024-04-21 14:50:12.922 [TestNG-test=Smoke Suite-1] RedRailPage - Verify red rail page and its elements
+[INFO ] 2024-04-21 14:50:15.138 [TestNG-test=Smoke Suite-2] SearchBusPage - Date input is already selected.
+[INFO ] 2024-04-21 14:50:31.200 [TestNG-test=Smoke Suite-2] SearchBusPage - Search completed successfully.
+[INFO ] 2024-04-21 14:50:46.962 [TestNG-test=Smoke Suite-2] SearchTrainPage - Performing train search
+[INFO ] 2024-04-21 14:50:55.572 [TestNG-test=Smoke Suite-2] SearchTrainPage - Details of the first train in the search results:
+[INFO ] 2024-04-21 14:50:55.572 [TestNG-test=Smoke Suite-2] SearchTrainPage - Train Name: Irctc Tejas Exp
+[INFO ] 2024-04-21 14:50:55.572 [TestNG-test=Smoke Suite-2] SearchTrainPage - Train Number:  82502
+[INFO ] 2024-04-21 14:50:55.572 [TestNG-test=Smoke Suite-2] SearchTrainPage - Source Station: New Delhi (NDLS)
+[INFO ] 2024-04-21 14:50:55.572 [TestNG-test=Smoke Suite-2] SearchTrainPage - Destination Station: Lucknow Ne (LJN)
+[INFO ] 2024-04-21 14:51:06.415 [TestNG-test=Smoke Suite-1] BusDetailsPage - Amenities, Bus Photos, Boarding & Dropping Points, Reviews, and Booking policies are displayed.
+[INFO ] 2024-10-04 12:32:22.076 [TestNG-test=Smoke Suite-1] AccountOptionsPage - Navigate to the Help section
+[ERROR] 2024-10-04 12:32:34.352 [TestNG-test=Smoke Suite-2] SearchBusPage - An error occurred during the search process: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class='sc-gZMcBi grvhsy']/text[text()='Goa'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.7.0', revision: '0a5b49d16f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\RUCHIT~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53197}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53197/devtoo..., se:cdpVersion: 128.0.6613.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ea2c3d4f2f55537c08757e74fd27fb61
+[INFO ] 2024-10-04 12:32:50.226 [TestNG-test=Smoke Suite-1] AccountOptionsPage - Navigate to the Help section
+[ERROR] 2024-10-04 12:33:05.819 [TestNG-test=Smoke Suite-2] SearchBusPage - An error occurred during the search process: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class='sc-gZMcBi grvhsy']/text[text()='Goa'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.7.0', revision: '0a5b49d16f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\RUCHIT~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53434}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53434/devtoo..., se:cdpVersion: 128.0.6613.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ea5fe73a3d8cfe274d267a2928627ae9
+[INFO ] 2024-10-04 12:33:12.204 [TestNG-test=Smoke Suite-1] AccountOptionsPage - Navigate to the Help section
+[ERROR] 2024-10-04 12:33:30.390 [TestNG-test=Smoke Suite-2] SearchBusPage - An error occurred during the search process: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class='sc-gZMcBi grvhsy']/text[text()='Goa'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.7.0', revision: '0a5b49d16f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\RUCHIT~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53587}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53587/devtoo..., se:cdpVersion: 128.0.6613.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ba9527ffe871971df7d12d7ba14a4830
+[INFO ] 2024-10-04 12:33:36.490 [TestNG-test=Smoke Suite-1] AccountOptionsPage - Navigate to the Help section
+[ERROR] 2024-10-04 12:33:56.245 [TestNG-test=Smoke Suite-2] SearchBusPage - An error occurred during the search process: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class='sc-gZMcBi grvhsy']/text[text()='Goa'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.7.0', revision: '0a5b49d16f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\RUCHIT~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53736}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53736/devtoo..., se:cdpVersion: 128.0.6613.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b3356d8ee1d0a930ca02f3ce335544b4
+[INFO ] 2024-10-04 12:34:02.809 [TestNG-test=Smoke Suite-1] HelpPage - Navigate to the Help section
+[INFO ] 2024-10-04 12:34:11.165 [TestNG-test=Smoke Suite-1] HelpPage - Landed on Help page successfully.
+[INFO ] 2024-10-04 12:34:11.165 [TestNG-test=Smoke Suite-1] HelpPage - Verify all essential elements are present on the Help page.
+[INFO ] 2024-10-04 12:34:14.552 [TestNG-test=Smoke Suite-2] HomePage - Verify all essential elements are present on the homepage.
+[INFO ] 2024-10-04 12:34:14.668 [TestNG-test=Smoke Suite-1] HelpPage - All essential elements are present on the Help page.
+[INFO ] 2024-10-04 12:34:14.669 [TestNG-test=Smoke Suite-1] HelpPage - Verify change in language
+[INFO ] 2024-10-04 12:34:16.061 [TestNG-test=Smoke Suite-1] HelpPage - Change in language happened successfully. Verification passed.
+[INFO ] 2024-10-04 12:34:27.540 [TestNG-test=Smoke Suite-2] HomePage - Verify all essential elements are present on the homepage.
+[INFO ] 2024-10-04 12:34:29.232 [TestNG-test=Smoke Suite-1] OffersPage - Navigate to the Offers section
+[INFO ] 2024-10-04 12:34:39.133 [TestNG-test=Smoke Suite-1] OffersPage - Landed on Offers page successfully.
+[INFO ] 2024-10-04 12:34:39.137 [TestNG-test=Smoke Suite-1] OffersPage - Verify Title of the second page
+[INFO ] 2024-10-04 12:34:39.249 [TestNG-test=Smoke Suite-1] OffersPage - Title of the second page contains 'Offers'. Verification passed.
+[INFO ] 2024-10-04 12:34:40.166 [TestNG-test=Smoke Suite-2] HomePage - Verify all essential elements are present on the homepage.
+[INFO ] 2024-10-04 12:34:40.687 [TestNG-test=Smoke Suite-1] OffersPage - Message 'What is the Offer' is displayed. Verification passed.
+[INFO ] 2024-10-04 12:34:55.561 [TestNG-test=Smoke Suite-2] HomePage - Verify all essential elements are present on the homepage.
+[INFO ] 2024-10-04 12:34:57.265 [TestNG-test=Smoke Suite-1] RedRailPage - Verify red rail page and its elements
+[INFO ] 2024-10-04 12:35:03.546 [TestNG-test=Smoke Suite-1] RedRailPage - Verify red rail page and its elements
+[INFO ] 2024-10-04 12:35:25.013 [TestNG-test=Smoke Suite-1] SearchTrainPage - Performing train search
+[INFO ] 2024-10-04 12:36:01.113 [TestNG-test=Smoke Suite-1] SearchTrainPage - Performing train search
+[INFO ] 2024-10-04 12:36:13.306 [TestNG-test=Smoke Suite-1] SearchTrainPage - Details of the first train in the search results:
+[INFO ] 2024-10-04 12:36:13.306 [TestNG-test=Smoke Suite-1] SearchTrainPage - Train Name:   irctc tejas exp
+[INFO ] 2024-10-04 12:36:13.306 [TestNG-test=Smoke Suite-1] SearchTrainPage - Train Number: 82502
+[INFO ] 2024-10-04 12:36:13.307 [TestNG-test=Smoke Suite-1] SearchTrainPage - Source Station: New Delhi (NDLS)
+[INFO ] 2024-10-04 12:36:13.307 [TestNG-test=Smoke Suite-1] SearchTrainPage - Destination Station: Lucknow Ne (LJN)
+[INFO ] 2024-10-04 12:39:42.620 [TestNG-test=Smoke Suite-2] OffersPage - Navigate to the Offers section
+[INFO ] 2024-10-04 12:39:49.186 [TestNG-test=Smoke Suite-2] OffersPage - Landed on Offers page successfully.
+[INFO ] 2024-10-04 12:39:49.186 [TestNG-test=Smoke Suite-2] OffersPage - Verify Title of the second page
+[INFO ] 2024-10-04 12:39:49.436 [TestNG-test=Smoke Suite-2] OffersPage - Title of the second page contains 'Offers'. Verification passed.
+[INFO ] 2024-10-04 12:39:49.624 [TestNG-test=Smoke Suite-2] OffersPage - Message 'What is the Offer' is displayed. Verification passed.
+[INFO ] 2024-10-04 12:39:50.426 [TestNG-test=Smoke Suite-1] HelpPage - Navigate to the Help section
+[INFO ] 2024-10-04 12:39:59.430 [TestNG-test=Smoke Suite-1] HelpPage - Landed on Help page successfully.
+[INFO ] 2024-10-04 12:39:59.430 [TestNG-test=Smoke Suite-1] HelpPage - Verify all essential elements are present on the Help page.
+[INFO ] 2024-10-04 12:40:03.093 [TestNG-test=Smoke Suite-1] HelpPage - All essential elements are present on the Help page.
+[INFO ] 2024-10-04 12:40:03.093 [TestNG-test=Smoke Suite-1] HelpPage - Verify change in language
+[INFO ] 2024-10-04 12:40:04.065 [TestNG-test=Smoke Suite-1] HelpPage - Change in language happened successfully. Verification passed.
+[INFO ] 2024-10-04 12:40:07.770 [TestNG-test=Smoke Suite-2] RedRailPage - Verify red rail page and its elements
+[INFO ] 2024-10-04 12:40:14.881 [TestNG-test=Smoke Suite-2] RedRailPage - Verify red rail page and its elements

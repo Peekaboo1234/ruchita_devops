@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ParallelSuite" parallel="methods" thread-count="2" configfailurepolicy="continue">
+	<listeners>
+		<listener class-name="redbus_nagp_automation.listeners.TestListener" />
+		<listener class-name="redbus_nagp_automation.listeners.MyTransformer" />
+	</listeners>
+	<test name="Smoke Suite">
+		<classes>
+			<class name="redbus_nagp_automation.testclass.SmokeTest">
+			</class>
+		</classes>
+	</test>
+</suite>

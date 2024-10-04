@@ -1,0 +1,528 @@
+<html>
+<head>
+<title>TestNG:  Smoke Suite</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Smoke Suite</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>7/0/5</td>
+</tr><tr>
+<td>Started on:</td><td>Sat Apr 20 12:02:50 IST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>235 seconds (235029 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='redbus_nagp_automation.testclass.SmokeTest.verifyBusSearch()'><b>verifyBusSearch</b><br>Test class: redbus_nagp_automation.testclass.SmokeTest<br>Test method: Verify Bus Search</td>
+<td></td>
+<td>85</td>
+<td>redbus_nagp_automation.testclass.SmokeTest@ec0c838</td></tr>
+<tr>
+<td title='redbus_nagp_automation.testclass.SmokeTest.verifyRedRailPage()'><b>verifyRedRailPage</b><br>Test class: redbus_nagp_automation.testclass.SmokeTest<br>Test method: Verify Train page elements</td>
+<td></td>
+<td>8</td>
+<td>redbus_nagp_automation.testclass.SmokeTest@ec0c838</td></tr>
+<tr>
+<td title='redbus_nagp_automation.testclass.SmokeTest.verifyOffersPage()'><b>verifyOffersPage</b><br>Test class: redbus_nagp_automation.testclass.SmokeTest<br>Test method: Verify Offers Page</td>
+<td></td>
+<td>9</td>
+<td>redbus_nagp_automation.testclass.SmokeTest@ec0c838</td></tr>
+<tr>
+<td title='redbus_nagp_automation.testclass.SmokeTest.verifySearchedBusDetails()'><b>verifySearchedBusDetails</b><br>Test class: redbus_nagp_automation.testclass.SmokeTest<br>Test method: Verify bus details</td>
+<td></td>
+<td>17</td>
+<td>redbus_nagp_automation.testclass.SmokeTest@ec0c838</td></tr>
+<tr>
+<td title='redbus_nagp_automation.testclass.SmokeTest.verifyAccountDetails()'><b>verifyAccountDetails</b><br>Test class: redbus_nagp_automation.testclass.SmokeTest<br>Test method: Verify Account Details Page</td>
+<td></td>
+<td>12</td>
+<td>redbus_nagp_automation.testclass.SmokeTest@ec0c838</td></tr>
+<tr>
+<td title='redbus_nagp_automation.testclass.SmokeTest.verifyTrainSearch()'><b>verifyTrainSearch</b><br>Test class: redbus_nagp_automation.testclass.SmokeTest<br>Test method: Verify Train search</td>
+<td></td>
+<td>12</td>
+<td>redbus_nagp_automation.testclass.SmokeTest@ec0c838</td></tr>
+<tr>
+<td title='redbus_nagp_automation.testclass.SmokeTest.verifyHomePage()'><b>verifyHomePage</b><br>Test class: redbus_nagp_automation.testclass.SmokeTest<br>Test method: Verify HomePage Elements</td>
+<td></td>
+<td>17</td>
+<td>redbus_nagp_automation.testclass.SmokeTest@ec0c838</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='redbus_nagp_automation.testclass.SmokeTest.verifyHelpPage()'><b>verifyHelpPage</b><br>Test class: redbus_nagp_automation.testclass.SmokeTest<br>Test method: Verify Help Page</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [Proxy element for: DefaultElementLocator &apos;By.xpath: //span[@class=&apos;languagePreference&apos; and text()=&apos;English&apos;]&apos;] (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at redbus_nagp_automation.pages.HelpPage.verifyLanguageChange(HelpPage.java:151)
+	at redbus_nagp_automation.testclass.SmokeTest.verifyHelpPage(SmokeTest.java:154)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //span[@class=&apos;languagePreference&apos; and text()=&apos;English&apos;]
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.7.0&apos;, revision: &apos;0a5b49d16f&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [01cddd11-ae1a-4903-8340-45fa2ca243fc, findElement {using=xpath, value=//span[@class=&apos;languagePreference&apos; and text()=&apos;English&apos;]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 125.0.1, moz:accessibilityChecks: false, moz:buildID: 20240416043247, moz:debuggerAddress: 127.0.0.1:24359, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 50664, moz:profile: C:\Users\RUCHIT~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:24359/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 01cddd11-ae1a-4903-8340-45fa2ca243fc
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy33.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:267)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:263)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	... 17 more
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace952919756", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace952919756'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [Proxy element for: DefaultElementLocator &apos;By.xpath: //span[@class=&apos;languagePreference&apos; and text()=&apos;English&apos;]&apos;] (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at redbus_nagp_automation.pages.HelpPage.verifyLanguageChange(HelpPage.java:151)
+	at redbus_nagp_automation.testclass.SmokeTest.verifyHelpPage(SmokeTest.java:154)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //span[@class=&apos;languagePreference&apos; and text()=&apos;English&apos;]
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.7.0&apos;, revision: &apos;0a5b49d16f&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [01cddd11-ae1a-4903-8340-45fa2ca243fc, findElement {using=xpath, value=//span[@class=&apos;languagePreference&apos; and text()=&apos;English&apos;]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 125.0.1, moz:accessibilityChecks: false, moz:buildID: 20240416043247, moz:debuggerAddress: 127.0.0.1:24359, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 50664, moz:profile: C:\Users\RUCHIT~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:24359/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 01cddd11-ae1a-4903-8340-45fa2ca243fc
+	at jdk.internal.reflect.GeneratedConstructorAccessor32.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy33.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:267)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:263)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	... 17 more
+</pre></div></td>
+<td>51</td>
+<td>redbus_nagp_automation.testclass.SmokeTest@ec0c838</td></tr>
+<tr>
+<td title='redbus_nagp_automation.testclass.SmokeTest.verifyHelpPage()'><b>verifyHelpPage</b><br>Test class: redbus_nagp_automation.testclass.SmokeTest<br>Test method: Verify Help Page</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [Proxy element for: DefaultElementLocator &apos;By.xpath: //span[@class=&apos;languagePreference&apos; and text()=&apos;English&apos;]&apos;] (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at redbus_nagp_automation.pages.HelpPage.verifyLanguageChange(HelpPage.java:151)
+	at redbus_nagp_automation.testclass.SmokeTest.verifyHelpPage(SmokeTest.java:154)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //span[@class=&apos;languagePreference&apos; and text()=&apos;English&apos;]
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.7.0&apos;, revision: &apos;0a5b49d16f&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [2faf8525-d866-42ef-9bbd-c1d7e65956af, findElement {using=xpath, value=//span[@class=&apos;languagePreference&apos; and text()=&apos;English&apos;]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 125.0.1, moz:accessibilityChecks: false, moz:buildID: 20240416043247, moz:debuggerAddress: 127.0.0.1:33275, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 23980, moz:profile: C:\Users\RUCHIT~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:33275/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 2faf8525-d866-42ef-9bbd-c1d7e65956af
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy33.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:267)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:263)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	... 17 more
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1016472292", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1016472292'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [Proxy element for: DefaultElementLocator &apos;By.xpath: //span[@class=&apos;languagePreference&apos; and text()=&apos;English&apos;]&apos;] (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at redbus_nagp_automation.pages.HelpPage.verifyLanguageChange(HelpPage.java:151)
+	at redbus_nagp_automation.testclass.SmokeTest.verifyHelpPage(SmokeTest.java:154)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //span[@class=&apos;languagePreference&apos; and text()=&apos;English&apos;]
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.7.0&apos;, revision: &apos;0a5b49d16f&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [2faf8525-d866-42ef-9bbd-c1d7e65956af, findElement {using=xpath, value=//span[@class=&apos;languagePreference&apos; and text()=&apos;English&apos;]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 125.0.1, moz:accessibilityChecks: false, moz:buildID: 20240416043247, moz:debuggerAddress: 127.0.0.1:33275, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 23980, moz:profile: C:\Users\RUCHIT~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:33275/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 2faf8525-d866-42ef-9bbd-c1d7e65956af
+	at jdk.internal.reflect.GeneratedConstructorAccessor32.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy33.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:267)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:263)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	... 17 more
+</pre></div></td>
+<td>52</td>
+<td>redbus_nagp_automation.testclass.SmokeTest@ec0c838</td></tr>
+<tr>
+<td title='redbus_nagp_automation.testclass.SmokeTest.verifyHelpPage()'><b>verifyHelpPage</b><br>Test class: redbus_nagp_automation.testclass.SmokeTest<br>Test method: Verify Help Page</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [Proxy element for: DefaultElementLocator &apos;By.xpath: //span[@class=&apos;languagePreference&apos; and text()=&apos;English&apos;]&apos;] (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at redbus_nagp_automation.pages.HelpPage.verifyLanguageChange(HelpPage.java:151)
+	at redbus_nagp_automation.testclass.SmokeTest.verifyHelpPage(SmokeTest.java:154)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //span[@class=&apos;languagePreference&apos; and text()=&apos;English&apos;]
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.7.0&apos;, revision: &apos;0a5b49d16f&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [2b53710f-aafe-432a-a452-e1c4d0fe9805, findElement {using=xpath, value=//span[@class=&apos;languagePreference&apos; and text()=&apos;English&apos;]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 125.0.1, moz:accessibilityChecks: false, moz:buildID: 20240416043247, moz:debuggerAddress: 127.0.0.1:46244, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 36352, moz:profile: C:\Users\RUCHIT~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:46244/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 2b53710f-aafe-432a-a452-e1c4d0fe9805
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy33.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:267)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:263)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	... 17 more
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace627060904", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace627060904'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [Proxy element for: DefaultElementLocator &apos;By.xpath: //span[@class=&apos;languagePreference&apos; and text()=&apos;English&apos;]&apos;] (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at redbus_nagp_automation.pages.HelpPage.verifyLanguageChange(HelpPage.java:151)
+	at redbus_nagp_automation.testclass.SmokeTest.verifyHelpPage(SmokeTest.java:154)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //span[@class=&apos;languagePreference&apos; and text()=&apos;English&apos;]
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.7.0&apos;, revision: &apos;0a5b49d16f&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [2b53710f-aafe-432a-a452-e1c4d0fe9805, findElement {using=xpath, value=//span[@class=&apos;languagePreference&apos; and text()=&apos;English&apos;]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 125.0.1, moz:accessibilityChecks: false, moz:buildID: 20240416043247, moz:debuggerAddress: 127.0.0.1:46244, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 36352, moz:profile: C:\Users\RUCHIT~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:46244/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 2b53710f-aafe-432a-a452-e1c4d0fe9805
+	at jdk.internal.reflect.GeneratedConstructorAccessor32.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy33.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:267)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:263)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	... 17 more
+</pre></div></td>
+<td>54</td>
+<td>redbus_nagp_automation.testclass.SmokeTest@ec0c838</td></tr>
+<tr>
+<td title='redbus_nagp_automation.testclass.SmokeTest.verifyHelpPage()'><b>verifyHelpPage</b><br>Test class: redbus_nagp_automation.testclass.SmokeTest<br>Test method: Verify Help Page</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [Proxy element for: DefaultElementLocator &apos;By.xpath: //span[@class=&apos;languagePreference&apos; and text()=&apos;English&apos;]&apos;] (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at redbus_nagp_automation.pages.HelpPage.verifyLanguageChange(HelpPage.java:151)
+	at redbus_nagp_automation.testclass.SmokeTest.verifyHelpPage(SmokeTest.java:154)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //span[@class=&apos;languagePreference&apos; and text()=&apos;English&apos;]
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.7.0&apos;, revision: &apos;0a5b49d16f&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [58928a83-edce-4028-a466-11fd9f06a9ff, findElement {using=xpath, value=//span[@class=&apos;languagePreference&apos; and text()=&apos;English&apos;]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 125.0.1, moz:accessibilityChecks: false, moz:buildID: 20240416043247, moz:debuggerAddress: 127.0.0.1:47357, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 50920, moz:profile: C:\Users\RUCHIT~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:47357/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 58928a83-edce-4028-a466-11fd9f06a9ff
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy33.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:267)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:263)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	... 17 more
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1453092054", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1453092054'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [Proxy element for: DefaultElementLocator &apos;By.xpath: //span[@class=&apos;languagePreference&apos; and text()=&apos;English&apos;]&apos;] (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at redbus_nagp_automation.pages.HelpPage.verifyLanguageChange(HelpPage.java:151)
+	at redbus_nagp_automation.testclass.SmokeTest.verifyHelpPage(SmokeTest.java:154)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //span[@class=&apos;languagePreference&apos; and text()=&apos;English&apos;]
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.7.0&apos;, revision: &apos;0a5b49d16f&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [58928a83-edce-4028-a466-11fd9f06a9ff, findElement {using=xpath, value=//span[@class=&apos;languagePreference&apos; and text()=&apos;English&apos;]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 125.0.1, moz:accessibilityChecks: false, moz:buildID: 20240416043247, moz:debuggerAddress: 127.0.0.1:47357, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 50920, moz:profile: C:\Users\RUCHIT~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:47357/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 58928a83-edce-4028-a466-11fd9f06a9ff
+	at jdk.internal.reflect.GeneratedConstructorAccessor32.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy33.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:267)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:263)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	... 17 more
+</pre></div></td>
+<td>53</td>
+<td>redbus_nagp_automation.testclass.SmokeTest@ec0c838</td></tr>
+<tr>
+<td title='redbus_nagp_automation.testclass.SmokeTest.verifyTrainSearch()'><b>verifyTrainSearch</b><br>Test class: redbus_nagp_automation.testclass.SmokeTest<br>Test method: Verify Train search</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class=&apos;stn_name_code_wrap&apos;]/div[text()=&apos;Lucknow - All Stations&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.7.0&apos;, revision: &apos;0a5b49d16f&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 125.0.1, moz:accessibilityChecks: false, moz:buildID: 20240416043247, moz:debuggerAddress: 127.0.0.1:21603, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 45988, moz:profile: C:\Users\RUCHIT~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:21603/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: e3c434cf-57dd-475d-bc02-d99d18ba7416
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at redbus_nagp_automation.utility.Utility.sendKeysAndClick(Utility.java:96)
+	at redbus_nagp_automation.pages.SearchTrainPage.performTrainSearch(SearchTrainPage.java:67)
+	at redbus_nagp_automation.testclass.SmokeTest.verifyTrainSearch(SmokeTest.java:117)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1353756958", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1353756958'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class=&apos;stn_name_code_wrap&apos;]/div[text()=&apos;Lucknow - All Stations&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.7.0&apos;, revision: &apos;0a5b49d16f&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 125.0.1, moz:accessibilityChecks: false, moz:buildID: 20240416043247, moz:debuggerAddress: 127.0.0.1:21603, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 45988, moz:profile: C:\Users\RUCHIT~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:21603/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: e3c434cf-57dd-475d-bc02-d99d18ba7416
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at redbus_nagp_automation.utility.Utility.sendKeysAndClick(Utility.java:96)
+	at redbus_nagp_automation.pages.SearchTrainPage.performTrainSearch(SearchTrainPage.java:67)
+	at redbus_nagp_automation.testclass.SmokeTest.verifyTrainSearch(SmokeTest.java:117)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+</pre></div></td>
+<td>19</td>
+<td>redbus_nagp_automation.testclass.SmokeTest@ec0c838</td></tr>
+</table><p>
+</body>
+</html>

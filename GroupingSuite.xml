@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="GroupingSuite" configfailurepolicy="continue">
+	<listeners>
+		<listener class-name="redbus_nagp_automation.listeners.TestListener" />
+		<listener class-name="redbus_nagp_automation.listeners.MyTransformer" />
+	</listeners>
+	<test name="Smoke Suite">
+		<groups>
+			<run>
+				<exclude name="smoke" />
+			</run>
+		</groups>
+		<classes>
+			<class name="redbus_nagp_automation.testclass.SmokeTest">
+			</class>
+		</classes>
+	</test>
+</suite>
