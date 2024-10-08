@@ -65,13 +65,6 @@ pipeline {
                 rtPublishBuildInfo(serverId: '029272@artifactory')
             }
         }
-
-        stage('Archive Artifacts') {
-            steps {
-                echo 'Archiving artifacts'
-                archiveArtifacts artifacts: '**/target/*.jar, **/target/*.pom', fingerprint: true
-            }
-        }
     }
 
     post {
@@ -87,6 +80,19 @@ pipeline {
         }
         unstable {
             echo 'Build was unstable (some tests failed or quality gate not met)'
+        }
+        // Capture build information
+        always {
+            script {
+                // Access the Artifactory build info if available
+                def buildInfo = rtBuildInfo(serverId: '029272@artifactory')
+
+                // Display a summary in the console
+                echo "Artifactory Build Info: ${buildInfo}"
+
+                // If you want to display SonarQube results, you may also consider providing a link or relevant info
+                echo 'SonarQube results can be viewed in the SonarQube dashboard.'
+            }
         }
     }
 }
