@@ -64,6 +64,16 @@ pipeline {
         }
         success {
             echo 'Pipeline completed successfully'
+
+            // Publish TestNG Results
+            publishHTML([
+                allowMissing: false,
+                alwaysLinkToLastBuild: true,
+                keepAll: true,
+                reportDir: 'target/surefire-reports',
+                reportFiles: 'emailable-report.html',
+                reportName: 'TestNG Report'
+            ])
         }
         failure {
             echo 'Pipeline failed'
