@@ -69,21 +69,11 @@ pipeline {
 
     post {
         always {
-            echo 'Cleaning workspace and finishing pipeline'
-            cleanWs()
-        }
-        success {
-            echo 'Pipeline completed successfully'
-        }
-        failure {
-            echo 'Pipeline failed'
-        }
-        unstable {
-            echo 'Build was unstable (some tests failed or quality gate not met)'
-        }
-        // Capture build information
-        always {
             script {
+                echo 'Cleaning workspace and finishing pipeline'
+                cleanWs()  // Clean workspace after each run
+
+                // Capture build information
                 // Access the Artifactory build info if available
                 def buildInfo = rtBuildInfo(serverId: '029272@artifactory')
 
@@ -93,6 +83,15 @@ pipeline {
                 // If you want to display SonarQube results, you may also consider providing a link or relevant info
                 echo 'SonarQube results can be viewed in the SonarQube dashboard.'
             }
+        }
+        success {
+            echo 'Pipeline completed successfully'
+        }
+        failure {
+            echo 'Pipeline failed'
+        }
+        unstable {
+            echo 'Build was unstable (some tests failed or quality gate not met)'
         }
     }
 }
