@@ -32,8 +32,8 @@ pipeline {
                 echo 'Generating TestNG Report'
                 bat 'mvn surefire-report:report'
                 
-                // Publish TestNG results
-                publishTestNG testResultsPattern: '**/testng-results.xml'
+                // Publish TestNG results using JUnit step
+                junit '**/testng-results.xml'
             }
         }
  
