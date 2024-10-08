@@ -30,7 +30,7 @@ pipeline {
         stage('Generate TestNG Report') {
             steps {
                 echo 'Generating TestNG Report'
-                publishTestNGResults(pattern: 'test-output/testng-results.xml') // Publish TestNG results
+                junit 'test-output/testng-results.xml' // Using JUnit to publish TestNG results
             }
         }
 
