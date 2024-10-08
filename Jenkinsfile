@@ -1,4 +1,4 @@
-pipeline { 
+pipeline {
     agent any
 
     tools {
@@ -27,6 +27,13 @@ pipeline {
             }
         }
 
+        stage('Generate TestNG Report') {
+            steps {
+                echo 'Generating TestNG Report'
+                publishTestNGResults(pattern: 'test-output/testng-results.xml') // Publish TestNG results
+            }
+        }
+
         stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv('Test_SonarQube') {
@@ -39,9 +46,9 @@ pipeline {
             steps {
                 rtMavenDeployer(
                     id: 'deployer',
-                    serverId: '029272@artifactory', // Artifactory server ID in Jenkins
-                    releaseRepo: 'ruchita.nagp.2024', // Release repo
-                    snapshotRepo: 'ruchita.nagp.2024'  // Snapshot repo
+                    serverId: '029272@artifactory',
+                    releaseRepo: 'ruchita.nagp.2024',
+                    snapshotRepo: 'ruchita.nagp.2024'
                 )
 
                 rtMavenRun(
@@ -50,9 +57,7 @@ pipeline {
                     deployerId: 'deployer'
                 )
 
-                rtPublishBuildInfo(
-                    serverId: '029272@artifactory' // Artifactory server ID
-                )
+                rtPublishBuildInfo(serverId: '029272@artifactory')
             }
         }
     }
@@ -60,20 +65,10 @@ pipeline {
     post {
         always {
             echo 'Cleaning workspace and finishing pipeline'
-            cleanWs()  // Clean workspace after each run
+            cleanWs()
         }
         success {
             echo 'Pipeline completed successfully'
-
-            // Publish TestNG Results
-            publishHTML([
-                allowMissing: false,
-                alwaysLinkToLastBuild: true,
-                keepAll: true,
-                reportDir: 'target/surefire-reports',
-                reportFiles: 'emailable-report.html',
-                reportName: 'TestNG Report'
-            ])
         }
         failure {
             echo 'Pipeline failed'
