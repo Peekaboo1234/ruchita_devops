@@ -33,7 +33,7 @@ pipeline {
                 bat 'mvn surefire-report:report'
                 
                 // Publish TestNG results
-                junit '**/target/surefire-reports/*.xml'
+                publishTestNG testResultsPattern: '**/testng-results.xml'
             }
         }
  
