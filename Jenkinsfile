@@ -13,14 +13,14 @@ pipeline {
             }
         }
 
-        stage('Code Build') {
+        stage('Build') {
             steps {
                 echo 'Compiling the code'
                 bat 'mvn clean'
             }
         }
 
-        stage('Unit Test') {
+        stage('Run Unit Tests') {
             steps {
                 echo 'Running Unit Tests'
                 bat 'mvn test'
@@ -31,6 +31,9 @@ pipeline {
             steps {
                 echo 'Generating TestNG Report'
                 bat 'mvn surefire-report:report'
+                
+                // Publish TestNG results
+                junit '**/target/surefire-reports/*.xml'
             }
         }
 
@@ -60,6 +63,13 @@ pipeline {
                 )
 
                 rtPublishBuildInfo(serverId: '029272@artifactory')
+            }
+        }
+
+        stage('Archive Artifacts') {
+            steps {
+                echo 'Archiving artifacts'
+                archiveArtifacts artifacts: '**/target/*.jar, **/target/*.pom', fingerprint: true
             }
         }
     }
