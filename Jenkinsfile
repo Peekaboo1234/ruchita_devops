@@ -30,9 +30,7 @@ pipeline {
         stage('Generate TestNG Report') {
             steps {
                 echo 'Generating TestNG Report'
-                // Ensure that the TestNG report is generated
-                bat 'mvn test' 
-                junit '**/testng-results.xml'  // Using JUnit to publish TestNG results
+                bat 'mvn surefire-report:report'
             }
         }
 
