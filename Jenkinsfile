@@ -30,13 +30,16 @@ pipeline {
         stage('Generate TestNG Report') {
             steps {
                 echo 'Generating TestNG Report'
-                junit 'test-output/testng-results.xml' // Using JUnit to publish TestNG results
+                // Ensure that the TestNG report is generated
+                bat 'mvn test' 
+                junit '**/testng-results.xml'  // Using JUnit to publish TestNG results
             }
         }
 
         stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv('Test_SonarQube') {
+                    echo 'Running SonarQube Analysis'
                     bat 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:4.0.0.4121:sonar'
                 }
             }
@@ -44,6 +47,7 @@ pipeline {
 
         stage('Publish to Artifactory') {
             steps {
+                echo 'Publishing to Artifactory'
                 rtMavenDeployer(
                     id: 'deployer',
                     serverId: '029272@artifactory',
