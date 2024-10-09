@@ -42,9 +42,12 @@ pipeline {
                 withSonarQubeEnv('Test_SonarQube') {
                     echo 'Running SonarQube Analysis'
                     // Run the SonarQube analysis and check the exit code
-                    bat 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:4.0.0.4121:sonar'
-                    if (currentBuild.result == 'FAILURE') {
-                        error 'SonarQube analysis failed, failing the build.'
+                    script {
+                        bat 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:4.0.0.4121:sonar'
+                        // Check if the command was successful
+                        if (currentBuild.result == 'FAILURE') {
+                            error 'SonarQube analysis failed, failing the build.'
+                        }
                     }
                 }
             }
