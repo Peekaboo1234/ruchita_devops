@@ -1,4 +1,4 @@
-pipeline {
+pipeline { 
     agent any
  
     tools {
@@ -42,6 +42,19 @@ pipeline {
                 withSonarQubeEnv('Test_SonarQube') {
                     echo 'Running SonarQube Analysis'
                     bat 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:4.0.0.4121:sonar'
+                }
+            }
+        }
+        
+        stage('Quality Gate Check') {
+            steps {
+                script {
+                    // Wait for the quality gate to be computed
+                    echo 'Waiting for SonarQube Quality Gate to be computed...'
+                    def qgStatus = waitForQualityGate()
+                    if (qgStatus.status != 'OK') {
+                        error "SonarQube Quality Gate failed: ${qgStatus.status}"
+                    }
                 }
             }
         }
