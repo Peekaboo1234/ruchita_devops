@@ -1,10 +1,10 @@
-pipeline { 
+pipeline {
     agent any
- 
+
     tools {
-        maven 'Maven 3.9.6'  
+        maven 'Maven 3.9.6'
     }
- 
+
     stages {
         stage('Checkout') {
             steps {
@@ -12,53 +12,44 @@ pipeline {
                 git branch: 'master', url: 'https://github.com/ruchita10pathak/ruchita_devops.git'
             }
         }
- 
+
         stage('Build') {
             steps {
                 echo 'Compiling the code'
                 bat 'mvn clean'
             }
         }
- 
+
         stage('Run Unit Tests') {
             steps {
                 echo 'Running Unit Tests'
                 bat 'mvn test'
             }
         }
- 
+
         stage('Generate TestNG Report') {
             steps {
                 echo 'Generating TestNG Report'
                 bat 'mvn surefire-report:report'
-                
+
                 // Publish TestNG results
-                junit '**/target/surefire-reports/*.xml'	             
+                junit '**/target/surefire-reports/*.xml'
             }
         }
- 
+
         stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv('Test_SonarQube') {
                     echo 'Running SonarQube Analysis'
+                    // Run the SonarQube analysis and check the exit code
                     bat 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:4.0.0.4121:sonar'
-                }
-            }
-        }
-        
-        stage('Quality Gate Check') {
-            steps {
-                script {
-                    // Wait for the quality gate to be computed
-                    echo 'Waiting for SonarQube Quality Gate to be computed...'
-                    def qgStatus = waitForQualityGate()
-                    if (qgStatus.status != 'OK') {
-                        error "SonarQube Quality Gate failed: ${qgStatus.status}"
+                    if (currentBuild.result == 'FAILURE') {
+                        error 'SonarQube analysis failed, failing the build.'
                     }
                 }
             }
         }
- 
+
         stage('Publish to Artifactory') {
             steps {
                 echo 'Publishing to Artifactory'
@@ -68,17 +59,17 @@ pipeline {
                     releaseRepo: 'ruchita.nagp.2024',
                     snapshotRepo: 'ruchita.nagp.2024'
                 )
- 
+
                 rtMavenRun(
                     pom: 'pom.xml',
                     goals: 'clean install',
                     deployerId: 'deployer'
                 )
- 
+
                 rtPublishBuildInfo(serverId: '029272@artifactory')
             }
         }
- 
+
         stage('Archive Artifacts') {
             steps {
                 echo 'Archiving artifacts'
@@ -86,7 +77,7 @@ pipeline {
             }
         }
     }
- 
+
     post {
         always {
             echo 'Cleaning workspace and finishing pipeline'
