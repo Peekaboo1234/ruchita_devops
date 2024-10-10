@@ -29,8 +29,8 @@ pipeline {
 
         stage('Generate TestNG Report') {
             steps {
-                echo 'Generating TestNG Report'           
-                publishTestNGResults testResultsPattern: '**/testng-results.xml'
+                echo 'Generating Test Report'           
+                junit '**/target/surefire-reports/*.xml'
             }
         }
 
