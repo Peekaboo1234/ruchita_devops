@@ -30,10 +30,11 @@ pipeline {
         stage('Generate TestNG Report') {
             steps {
                 echo 'Generating TestNG Report'
+                // Surefire plugin generates TestNG XML reports in target/surefire-reports
                 bat 'mvn surefire-report:report'
 
-                // Publish TestNG results
-                junit '**/target/surefire-reports/*.xml'
+                // Publish the TestNG XML results in Jenkins
+                junit '**/target/surefire-reports/testng-results.xml'
             }
         }
 
@@ -41,10 +42,8 @@ pipeline {
             steps {
                 withSonarQubeEnv('Test_SonarQube') {
                     echo 'Running SonarQube Analysis'
-                    // Run the SonarQube analysis and check the exit code
                     script {
                         bat 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:4.0.0.4121:sonar'
-                        // Check if the command was successful
                         if (currentBuild.result == 'FAILURE') {
                             error 'SonarQube analysis failed, failing the build.'
                         }
