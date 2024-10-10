@@ -30,11 +30,10 @@ pipeline {
         stage('Generate TestNG Report') {
             steps {
                 echo 'Generating TestNG Report'
-                // Surefire plugin generates TestNG XML reports in target/surefire-reports
                 bat 'mvn surefire-report:report'
 
-                // Publish the TestNG XML results in Jenkins
-                junit '**/target/surefire-reports/testng-results.xml'
+                // Publish the TestNG results in Jenkins
+                publishTestNGResults testResultsPattern: '**/target/surefire-reports/testng-results.xml'
             }
         }
 
