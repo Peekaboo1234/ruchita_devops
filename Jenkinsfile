@@ -30,9 +30,7 @@ pipeline {
         stage('Generate TestNG Report') {
             steps {
                 echo 'Generating TestNG Report'
-                bat 'mvn surefire-report:report'
-
-                // Publish the TestNG results in Jenkins
+                // Instead of running 'mvn surefire-report:report', we will look for reports manually
                 publishTestNGResults testResultsPattern: '**/target/surefire-reports/testng-results.xml'
             }
         }
