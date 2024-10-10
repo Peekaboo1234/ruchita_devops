@@ -27,13 +27,6 @@ pipeline {
             }
         }
 
-        stage('Generate TestNG Report') {
-            steps {
-                echo 'Generating Test Report'           
-                junit '**/target/surefire-reports/*.xml'
-            }
-        }
-
         stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv('Test_SonarQube') {
@@ -78,6 +71,8 @@ pipeline {
 
     post {
         always {
+            echo 'Generating Test Report'
+            junit '**/target/surefire-reports/*.xml' // Publish test results
             echo 'Cleaning workspace and finishing pipeline'
             cleanWs()
         }
