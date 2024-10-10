@@ -29,9 +29,8 @@ pipeline {
 
         stage('Generate TestNG Report') {
             steps {
-                echo 'Generating TestNG Report'
-                // Instead of running 'mvn surefire-report:report', we will look for reports manually
-                publishTestNGResults testResultsPattern: '**/target/surefire-reports/testng-results.xml'
+                echo 'Generating TestNG Report'           
+                publishTestNGResults testResultsPattern: '**/testng-results.xml'
             }
         }
 
