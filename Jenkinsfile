@@ -72,7 +72,7 @@ pipeline {
     post {
         always {
             echo 'Generating Test Report'
-            junit '**/target/surefire-reports/*.xml' // Publish test results
+            junit testResults: '**/target/surefire-reports/*.xml', skipPublishingChecks: true
             echo 'Cleaning workspace and finishing pipeline'
             cleanWs()
         }
